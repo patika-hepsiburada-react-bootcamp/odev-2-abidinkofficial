@@ -4,13 +4,20 @@ import Letter from "../../components/Letter"
 import HangedMan from "../../components/HangedMan"
 
 import words from "../../data/words"
+import { isLetter } from "../../utils"
 
 const Home = () => {
   const [randomWord, setRandomWord] = useState("")
 
   useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress)
     setRandomWord(words[Math.floor(Math.random() * 10)])
   }, [])
+
+  const handleKeyPress = (event) => {
+    const input = event.key.toLowerCase()
+    isLetter(input) && console.log(input)
+  } 
 
   return (
     <div className={styles["Home"]}>
