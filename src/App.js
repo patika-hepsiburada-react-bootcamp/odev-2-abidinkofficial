@@ -1,7 +1,9 @@
-function App() {
+import Home from "./pages/Home"
+
+const App = () => {
   return (
     <div className="App">
-      Ödev 2 - Abidin Kumaş
+      <Home />
     </div>
   );
 }

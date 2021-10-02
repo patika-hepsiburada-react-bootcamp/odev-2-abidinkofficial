@@ -1,0 +1,10 @@
+.Letter {
+  color: #1f1f1f;
+  background-color: #eeeeee;
+  font-size: 32px;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
