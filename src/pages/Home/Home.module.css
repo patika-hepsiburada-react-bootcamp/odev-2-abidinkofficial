@@ -3,12 +3,22 @@
   width: 100%;
   min-height: 100vh;
 }
-
+header {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  padding-left: 25px;
+}
 header h1 {
   color: #ffffff;
   padding: 25px;
   font-size: 48px;
   font-weight: 700;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
 }
 
 .game {
