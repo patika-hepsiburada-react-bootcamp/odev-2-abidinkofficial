@@ -34,6 +34,7 @@ const Home = () => {
         return "_"
       }
     }))
+    // eslint-disable-next-line
   }, [inputArr])
 
   useEffect(() => {
