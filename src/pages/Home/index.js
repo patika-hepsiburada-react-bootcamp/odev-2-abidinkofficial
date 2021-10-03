@@ -87,6 +87,7 @@ const Home = () => {
       </header>
       <div className={styles["game"]}>
         <div className={styles["game-word"]}>
+          <span>(Klavye ile giriş yapabilirsin.)</span>
           <div>
             {
               displayArr.map((letter, i) => <Letter key={i} letter={letter} />)
