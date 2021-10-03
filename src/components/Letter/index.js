@@ -1,9 +1,10 @@
 import styles from "./Letter.module.css"
 
+// Main letter component
 const Letter = ({ letter = null }) => {
   return (
     <div className={styles["Letter"]}>
-      {letter ? letter : "A"}
+      {letter ? letter : "_"}
     </div>
   )
 }

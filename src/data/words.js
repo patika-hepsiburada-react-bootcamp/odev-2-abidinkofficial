@@ -1,6 +1,7 @@
+// Words used in the game (some linux distros.)
 const words = [
   "manjaro",
-  "arch",
+  "archlinux",
   "ubuntu",
   "elementary",
   "debian",
@@ -8,7 +9,10 @@ const words = [
   "pardus",
   "fedora",
   "redhat",
-  "opensuse"
+  "opensuse",
+  "linuxmint",
+  "kali",
+  "pisilinux"
 ]
 
 export default words
