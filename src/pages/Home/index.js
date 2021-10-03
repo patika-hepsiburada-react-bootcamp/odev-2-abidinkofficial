@@ -18,7 +18,7 @@ const Home = () => {
   console.log(inputArr)
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKeyPress)
+    window.addEventListener("keydown", handleKeyPress, true)
     setRandomWord(words[Math.floor(Math.random() * 10)])
   }, [])
 
@@ -38,7 +38,7 @@ const Home = () => {
   }, [inputArr])
 
   useEffect(() => {
-    if (inputLetter && !inputArr.includes(inputLetter)) {
+    if (inputLetter && !inputArr.includes(inputLetter) && wrong < 5 && !win) {
       setInputArr((arr) => [...arr, inputLetter])
       if (!randomWord.split("").includes(inputLetter)) {
         setWrong((w) => w + 1)
@@ -55,12 +55,24 @@ const Home = () => {
   }, [displayArr])
 
   useEffect(() => {
-    if (wrong >= 5) {setLose(true)}
+    if (wrong >= 5) {
+      setLose(true)
+    }
   }, [wrong])
 
   const handleKeyPress = (event) => {
     let input = event.key.toLowerCase()
     isLetter(input) && setInputLetter(input)
+  }
+
+  const reload = () => {
+    setRandomWord(words[Math.floor(Math.random() * 10)])
+    setInputLetter(null)
+    setInputArr([])
+    setDisplayArr([])
+    setWin(false)
+    setLose(false)
+    setWrong(0)
   }
 
   return (
@@ -74,8 +86,8 @@ const Home = () => {
           {
             displayArr.map((letter, i) => <Letter key={i} letter={letter} />)
           }
-          {win && <div>Win</div>}
-          {lose && <div>Game over</div>}
+          {win && <button type="button" onClick={reload}>Yeni oyun</button>}
+          {lose && <button type="button" onClick={reload}>Yeniden dene</button>}
         </div>
         <div className={styles["game-hanged"]}>
           <HangedMan wrong={wrong} />
