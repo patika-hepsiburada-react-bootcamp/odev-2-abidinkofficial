@@ -38,7 +38,18 @@ header img {
   margin: 25px;
   padding: 25px;
   border-radius: 25px;
+}
+
+.game-word div {
   display: flex;
+}
+
+.game-word p {
+  margin: 20px 5px 0px;
+  padding: 5px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  width: fit-content;
 }
 
 .game-hanged {
@@ -48,6 +59,16 @@ header img {
   margin: 25px;
   padding: 25px;
   border-radius: 25px;
+}
+
+.UnusedLetters {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 5px;
+}
+
+.UnusedLetters div {
+  display: flex;
 }
 
 footer {
